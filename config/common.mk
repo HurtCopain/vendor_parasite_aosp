@@ -10,7 +10,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
