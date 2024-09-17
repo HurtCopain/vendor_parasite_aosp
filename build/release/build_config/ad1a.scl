@@ -1,4 +1,5 @@
-# Copyright (C) 2024 The LineageOS Project
+#
+# Copyright (C) 2024 The hentaiOS Project and its Proprietors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,13 +12,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#
 
 load("//build/make/core/release_config.scl", "value")
 
 values = [
-    # keep-sorted start numeric=yes
-    value("RELEASE_ACONFIG_FLAG_DEFAULT_PERMISSION", "READ_WRITE"),
-    value("RELEASE_ACONFIG_VALUE_SETS", "aconfig_value_set-custom-ap2a"),
-    # keep-sorted end
+    # Build Information
+    value("RELEASE_PLATFORM_SECURITY_PATCH", "2024-09-05"),
+    value("RELEASE_PLATFORM_VERSION", "AD1A"),
+
+    # APEX
+    value("RELEASE_DEFAULT_MODULE_BUILD_FROM_SOURCE", ""),
+    value("RELEASE_APEX_BOOT_JARS_PREBUILT_EXCLUDED_LIST", "com.android.mediaprovider:framework-pdf com.android.mediaprovider:framework-pdf-v"),
 ]
